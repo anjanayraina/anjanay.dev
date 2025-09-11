@@ -36,7 +36,7 @@ export function ResumePage() {
                             pageNumber={index + 1}
                             renderTextLayer={false}
                             renderAnnotationLayer={false}
-                            width={Math.min(window.innerWidth * 0.9, 1000)} // Responsive width
+                            width={Math.min(window.innerWidth * 0.9, 1000)}
                         />
                     ))}
                 </Document>
