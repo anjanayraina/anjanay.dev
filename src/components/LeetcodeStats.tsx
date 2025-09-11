@@ -2,16 +2,17 @@ import { useState, useEffect } from "react";
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 
-// Updated interface to match the new API response structure
+// Updated interface to match the new, more detailed API response
 interface LeetCodeStats {
-    solvedProblem: number;
+    totalSolved: number;
     easySolved: number;
     mediumSolved: number;
     hardSolved: number;
+    ranking: number;
 }
 
 export function LeetcodeStats() {
-    const leetcodeUsername = "anjanayraina"; // <-- IMPORTANT: Change this to your LeetCode username!
+    const leetcodeUsername = "anjanayraina"; // <-- Make sure this is your LeetCode username
     const [stats, setStats] = useState<LeetCodeStats | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
@@ -20,18 +21,24 @@ export function LeetcodeStats() {
         const fetchLeetCodeStats = async () => {
             try {
                 // Updated API endpoint
-                const response = await fetch(`https://alfa-leetcode-api.onrender.com/${leetcodeUsername}/solved`);
+                const response = await fetch(`https://leetcode-api-faisalshohag.vercel.app/${leetcodeUsername}`);
                 if (!response.ok) {
-                    throw new Error('Failed to fetch LeetCode stats. Please check the username.');
+                    throw new Error('Failed to fetch LeetCode stats. User might not exist.');
                 }
                 const data = await response.json();
 
-                // Directly set the stats from the new API structure
+                // Check for an error message from the API itself
+                if (data.message) {
+                    throw new Error(data.message);
+                }
+
+                // Set the state with the new data structure
                 setStats({
-                    solvedProblem: data.solvedProblem,
+                    totalSolved: data.totalSolved,
                     easySolved: data.easySolved,
                     mediumSolved: data.mediumSolved,
                     hardSolved: data.hardSolved,
+                    ranking: data.ranking,
                 });
             } catch (err: any) {
                 setError(err.message);
@@ -77,25 +84,24 @@ export function LeetcodeStats() {
                     </p>
                 </div>
 
-                {/* Updated Stats Cards Layout */}
+                {/* Main Stats Cards */}
                 <div className="flex justify-center mb-6">
                     <Card className="p-6 bg-card border-border text-center w-full md:w-1/3">
-                        <h3 className="text-5xl font-mono text-accent mb-2">{stats.solvedProblem}</h3>
-                        <p className="text-muted-foreground">Total Problems Solved</p>
+                        <h3 className="text-4xl font-mono text-accent mb-2">{stats.totalSolved}</h3>
+                        <p className="text-muted-foreground">Problems Solved</p>
                     </Card>
                 </div>
 
+                {/* Difficulty Breakdown */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                     <Card className="p-4 bg-secondary/30 text-center">
                         <p className="text-lg font-mono text-green-400">{stats.easySolved}</p>
                         <p className="text-sm text-muted-foreground">Easy</p>
                     </Card>
-
                     <Card className="p-4 bg-secondary/30 text-center">
                         <p className="text-lg font-mono text-yellow-400">{stats.mediumSolved}</p>
                         <p className="text-sm text-muted-foreground">Medium</p>
                     </Card>
-
                     <Card className="p-4 bg-secondary/30 text-center">
                         <p className="text-lg font-mono text-red-400">{stats.hardSolved}</p>
                         <p className="text-sm text-muted-foreground">Hard</p>
