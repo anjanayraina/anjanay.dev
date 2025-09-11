@@ -10,7 +10,7 @@ export function Hero() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <ImageWithFallback
-              src="https://images.unsplash.com/photo-1655036387197-566206c80980?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjeWJlcnNlY3VyaXR5JTIwY29kZSUyMHRlcm1pbmFsfGVufDF8fHx8MTc1NzU4NzM1Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+              src="https://images.unsplash.com/photo-1655036387197-566206c80980?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjeWJlcnNlYurezzaHVyaXR5JTIwY29kZSUyMHRlcm1pbmFsfGVufDF8fHx8MTc1NzU4NzM1Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
               alt="Cybersecurity Code Terminal"
               className="w-full h-full object-cover opacity-10"
           />
@@ -63,11 +63,17 @@ export function Hero() {
             </Button>
           </div>
 
-          {/* Quick Stats */}
+          {/* Quick Stats - Updated with Vulnerabilities Mitigated */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="text-3xl font-mono text-primary mb-2">2+</div>
               <div className="text-muted-foreground">Years Backend Experience</div>
+            </div>
+
+            {/* New stat added here */}
+            <div className="text-center">
+              <div className="text-3xl font-mono text-accent mb-2">30+</div>
+              <div className="text-muted-foreground">Critical Vulnerabilities Mitigated</div>
             </div>
 
             <div className="text-center">
