@@ -2471,7 +2471,9 @@
   .text-destructive {
     color: var(--destructive);
   }
-
+  .text-amber-accent{
+    color: var(--amber-accent);
+  }
   .text-foreground {
     color: var(--foreground);
   }
@@ -4987,6 +4989,7 @@
   --secure-green: #0f8;
   --amber-accent: #fbbf24;
   --grid-pattern: #1a1a1f;
+
 }
 
 .dark {
@@ -5543,4 +5546,29 @@ html {
           0 0 20px rgba(248, 113, 113, 0.3),
           0 0 40px rgba(248, 113, 113, 0.2),
           0 0 60px rgba(248, 113, 113, 0.1);
+}
+
+/* LeetCode Card Hover Glows */
+.hover-glow-accent:hover {
+  box-shadow:
+          0 0 20px rgba(0, 255, 136, 0.3),
+          0 0 40px rgba(0, 255, 136, 0.2);
+}
+
+.hover-glow-primary:hover {
+  box-shadow:
+          0 0 20px rgba(0, 212, 255, 0.3),
+          0 0 40px rgba(0, 212, 255, 0.2);
+}
+
+.hover-glow-amber:hover {
+  box-shadow:
+          0 0 20px rgba(251, 191, 36, 0.3),
+          0 0 40px rgba(251, 191, 36, 0.2);
+}
+
+.hover-glow-red:hover {
+  box-shadow:
+          0 0 20px rgba(239, 68, 68, 0.3),
+          0 0 40px rgba(239, 68, 68, 0.2);
 }
