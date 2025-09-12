@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
+import { useCountUp } from "./useCountUp"; // Make sure you have this file from the previous step
 
 // Interface for the stats we want to display
 interface LeetCodeStats {
@@ -16,6 +17,11 @@ export function LeetcodeStats() {
     const [stats, setStats] = useState<LeetCodeStats | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
+
+    const { count: totalCount, ref: totalRef } = useCountUp(stats?.totalSolved || 0);
+    const { count: easyCount, ref: easyRef } = useCountUp(stats?.easySolved || 0);
+    const { count: mediumCount, ref: mediumRef } = useCountUp(stats?.mediumSolved || 0);
+    const { count: hardCount, ref: hardRef } = useCountUp(stats?.hardSolved || 0);
 
     useEffect(() => {
         const fetchLeetCodeStats = async () => {
@@ -81,26 +87,26 @@ export function LeetcodeStats() {
                     </p>
                 </div>
 
-                {/* Main Stats Card - Centered with Color and Hover Effect */}
+                {/* Main Stats Card - Updated with styles */}
                 <div className="flex justify-center mb-6">
-                    <Card className="p-6 bg-card border-border text-center w-full md:w-1/3 transition-all duration-300 hover:scale-105 hover:border-accent/80">
-                        <h3 className="text-4xl font-mono text-accent mb-2">{stats.totalSolved}</h3>
+                    <Card className="p-6 bg-card border-accent/30 text-center w-full md:w-1/3 transition-all duration-300 hover:scale-105 hover-glow-accent">
+                        <h3 ref={totalRef} className="text-4xl font-mono text-accent mb-2">{totalCount}</h3>
                         <p className="text-muted-foreground">Problems Solved</p>
                     </Card>
                 </div>
 
-                {/* Difficulty Breakdown - with Colors and Hover Effects */}
+                {/* Difficulty Breakdown - Updated with styles */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                    <Card className="p-4 bg-secondary/30 text-center transition-all duration-300 hover:scale-105 hover:border-green-400/50">
-                        <p className="text-lg font-mono text-green-400">{stats.easySolved}</p>
+                    <Card className="p-4 bg-secondary/30 text-center transition-all duration-300 hover:scale-105 hover-glow-green border-green-400/30">
+                        <p ref={easyRef} className="text-lg font-mono text-green-400">{easyCount}</p>
                         <p className="text-sm text-muted-foreground">Easy</p>
                     </Card>
-                    <Card className="p-4 bg-secondary/30 text-center transition-all duration-300 hover:scale-105 hover:border-yellow-400/50">
-                        <p className="text-lg font-mono text-yellow-400">{stats.mediumSolved}</p>
+                    <Card className="p-4 bg-secondary/30 text-center transition-all duration-300 hover:scale-105 hover-glow-yellow border-yellow-400/30">
+                        <p ref={mediumRef} className="text-lg font-mono text-yellow-400">{mediumCount}</p>
                         <p className="text-sm text-muted-foreground">Medium</p>
                     </Card>
-                    <Card className="p-4 bg-secondary/30 text-center transition-all duration-300 hover:scale-105 hover:border-red-400/50">
-                        <p className="text-lg font-mono text-red-400">{stats.hardSolved}</p>
+                    <Card className="p-4 bg-secondary/30 text-center transition-all duration-300 hover:scale-105 hover-glow-red border-red-400/30">
+                        <p ref={hardRef} className="text-lg font-mono text-red-400">{hardCount}</p>
                         <p className="text-sm text-muted-foreground">Hard</p>
                     </Card>
                 </div>

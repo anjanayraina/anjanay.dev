@@ -5514,3 +5514,33 @@ html {
     opacity: 0;
   }
 }
+
+
+/* LeetCode Card Hover Glows */
+.hover-glow-accent:hover {
+  box-shadow:
+          0 0 20px rgba(0, 255, 136, 0.3),
+          0 0 40px rgba(0, 255, 136, 0.2),
+          0 0 60px rgba(0, 255, 136, 0.1);
+}
+
+.hover-glow-green:hover {
+  box-shadow:
+          0 0 20px rgba(74, 222, 128, 0.3),
+          0 0 40px rgba(74, 222, 128, 0.2),
+          0 0 60px rgba(74, 222, 128, 0.1);
+}
+
+.hover-glow-yellow:hover {
+  box-shadow:
+          0 0 20px rgba(250, 204, 21, 0.3),
+          0 0 40px rgba(250, 204, 21, 0.2),
+          0 0 60px rgba(250, 204, 21, 0.1);
+}
+
+.hover-glow-red:hover {
+  box-shadow:
+          0 0 20px rgba(248, 113, 113, 0.3),
+          0 0 40px rgba(248, 113, 113, 0.2),
+          0 0 60px rgba(248, 113, 113, 0.1);
+}
