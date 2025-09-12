@@ -9,14 +9,14 @@ export function Contact() {
       icon: Mail,
       title: "Email",
       description: "Direct communication for audit inquiries",
-      value: "anjanay.raina@example.com",
+      value: "anjanayraina@gmail.com",
       action: "Send Email",
       color: "text-primary",
       bgColor: "bg-primary/10"
     },
     {
       icon: MessageCircle,
-      title: "Discord",
+      title: "Telegram",
       description: "Quick discussions and community engagement",
       value: "@anjanay_raina",
       action: "Message on Discord",

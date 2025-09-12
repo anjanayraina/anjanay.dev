@@ -1,6 +1,5 @@
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
-// Updated imports to include Linkedin and Keyboard icons
 import { Github, ExternalLink, Linkedin, Keyboard } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
@@ -18,25 +17,25 @@ export function Hero() {
         </div>
 
         <div className="container mx-auto px-6 z-10 text-center max-w-5xl">
-          {/* Status Badge - Updated Text */}
+          {/* Status Badge */}
           <Badge variant="outline" className="mb-8 border-primary text-primary font-mono cyber-glow">
             <div className="w-2 h-2 bg-accent rounded-full mr-2 animate-pulse"></div>
-            Status: Available
+            Status: Available for Audits & Projects
           </Badge>
 
           {/* Main Heading */}
           <h1 className="mb-6 font-mono">
-          <span className="block text-6xl md:text-8xl bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-pulse">
-            Anjanay Raina
-          </span>
+            <span className="block text-6xl md:text-8xl bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-pulse">
+              Anjanay Raina
+            </span>
           </h1>
 
-          {/* Sub-headline - Updated Text */}
+          {/* Sub-headline - Updated from Resumes */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
-            Backend Engineer, Smart Contract Developer, and Security Researcher specializing in high-performance systems and comprehensive code audits.
+            Lead Smart-Contract Auditor and Backend Developer specializing in high-value DeFi protocols and performant, fault-tolerant systems.
           </p>
 
-          {/* Credibility Links - Updated Links */}
+          {/* Credibility Links */}
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12">
             <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 cyber-glow">
               <a href="https://github.com/anjanraina" target="_blank" rel="noopener noreferrer">
@@ -45,15 +44,13 @@ export function Hero() {
                 <ExternalLink className="w-3 h-3 ml-2" />
               </a>
             </Button>
-
             <Button asChild variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300 secure-glow">
-              <a href="https://www.linkedin.com/in/anjanayraina/" target="_blank" rel="noopener noreferrer"> {/* TODO: Add your LinkedIn URL */}
+              <a href="https://www.linkedin.com/in/anjanayraina/" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="w-4 h-4 mr-2" />
                 LinkedIn
                 <ExternalLink className="w-3 h-3 ml-2" />
               </a>
             </Button>
-
             <Button asChild variant="outline" className="border-amber-accent text-amber-accent hover:bg-amber-accent hover:text-background transition-all duration-300">
               <a href="https://leetcode.com/u/anjanayraina/" target="_blank" rel="noopener noreferrer">
                 <Keyboard className="w-4 h-4 mr-2" />
@@ -63,26 +60,23 @@ export function Hero() {
             </Button>
           </div>
 
-          {/* Quick Stats - Updated with Vulnerabilities Mitigated */}
+          {/* Quick Stats - Updated from Resumes */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-mono text-primary mb-2">2+</div>
-              <div className="text-muted-foreground">Years Backend Experience</div>
-            </div>
-
-            {/* New stat added here */}
-            <div className="text-center">
-              <div className="text-3xl font-mono text-accent mb-2">30+</div>
-              <div className="text-muted-foreground">Critical Vulnerabilities Mitigated</div>
-            </div>
-
-            <div className="text-center">
-              <div className="text-3xl font-mono text-amber-accent mb-2">3x</div>
-              <div className="text-muted-foreground">API Performance Improvement</div>
+              <div className="text-3xl font-mono text-primary mb-2">3+</div>
+              <div className="text-muted-foreground">Years Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-mono text-orange-400 mb-2">90%</div>
-              <div className="text-muted-foreground">Data Processing Efficiency</div>
+              <div className="text-3xl font-mono text-accent mb-2">15+</div>
+              <div className="text-muted-foreground">Critical Vulnerabilities Found</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-mono text-amber-accent mb-2">60%</div>
+              <div className="text-muted-foreground">Max Gas Optimization</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-mono text-orange-400 mb-2">Top 300</div>
+              <div className="text-muted-foreground">Code4rena Auditor Ranking</div>
             </div>
           </div>
         </div>
