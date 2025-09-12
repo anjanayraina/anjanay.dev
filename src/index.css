@@ -138,6 +138,31 @@
     --default-mono-font-feature-settings: var(--font-mono--font-feature-settings);
     --default-mono-font-variation-settings: var(--font-mono--font-variation-settings);
     --color-border: var(--border);
+    /* Paste these custom variables inside the :root, :host block */
+    --background: #0a0a0b;
+    --foreground: #f8f9fa;
+    --card: #151518;
+    --card-foreground: #f8f9fa;
+    --popover: #151518;
+    --popover-foreground: #f8f9fa;
+    --primary: #00d4ff;
+    --primary-foreground: #0a0a0b;
+    --secondary: #1a1a1f;
+    --secondary-foreground: #f8f9fa;
+    --muted: #1a1a1f;
+    --muted-foreground: #9ca3af;
+    --accent: #00ff88;
+    --accent-foreground: #0a0a0b;
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --border: #2a2a30;
+    --input: #1a1a1f;
+    --input-background: #1a1a1f;
+    --ring: #00d4ff;
+    --radius: 0.625rem;
+
+    /* Custom colors for the portfolio */
+    --amber-accent: #fbbf24;
   }
 }
 
@@ -5025,6 +5050,20 @@ html {
 
 .secure-glow {
   box-shadow: 0 0 20px #00ff884d, 0 0 40px #0f83, 0 0 60px #00ff881a;
+}
+
+.amber-glow {
+  box-shadow:
+          0 0 20px rgba(251, 191, 36, 0.3),
+          0 0 40px rgba(251, 191, 36, 0.2),
+          0 0 60px rgba(251, 191, 36, 0.1);
+}
+
+.orange-glow {
+  box-shadow:
+          0 0 20px rgba(251, 146, 60, 0.3),
+          0 0 40px rgba(251, 146, 60, 0.2),
+          0 0 60px rgba(251, 146, 60, 0.1);
 }
 
 @property --tw-translate-x {
