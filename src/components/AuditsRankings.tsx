@@ -27,9 +27,9 @@ export function AuditsRankings() {
       title: "Performance Boost",
       subtitle: "API Response Time",
       value: "3x Faster",
-      description: "Optimized multithreading and database queries",
+      description: "Optimized multthreading and database queries",
       color: "text-amber-accent",
-      glowClass: ""
+      glowClass: "amber-glow" // Changed
     },
     {
       icon: Shield,
@@ -38,7 +38,7 @@ export function AuditsRankings() {
       value: "Top 300",
       description: "Code4rena ranking + published IEEE research",
       color: "text-orange-400",
-      glowClass: ""
+      glowClass: "orange-glow" // Changed
     }
   ];
 

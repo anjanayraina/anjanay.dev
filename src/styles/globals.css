@@ -229,3 +229,17 @@ html {
     0 0 40px rgba(0, 255, 136, 0.2),
     0 0 60px rgba(0, 255, 136, 0.1);
 }
+
+.amber-glow {
+  box-shadow:
+          0 0 20px rgba(251, 191, 36, 0.3),  /* --amber-accent */
+          0 0 40px rgba(251, 191, 36, 0.2),
+          0 0 60px rgba(251, 191, 36, 0.1);
+}
+
+.orange-glow {
+  box-shadow:
+          0 0 20px rgba(251, 146, 60, 0.3),  /* A common orange-400 value */
+          0 0 40px rgba(251, 146, 60, 0.2),
+          0 0 60px rgba(251, 146, 60, 0.1);
+}
