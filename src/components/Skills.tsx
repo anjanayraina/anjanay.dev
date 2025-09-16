@@ -5,99 +5,78 @@ import { Shield, Code, Server, Zap, Database, GitMerge } from "lucide-react";
 export function Skills() {
   const skillCategories = [
     {
-      title: "Languages",
+      title: "Programming Languages",
       icon: Code,
       color: "text-primary",
       borderColor: "border-primary/30",
       skills: [
         { name: "Python", level: "Expert" },
-        { name: "Solidity", level: "Expert" },
+        { name: "Golang", level: "Advanced" },
         { name: "Rust", level: "Advanced" },
-        { name: "Go (Golang)", level: "Advanced" },
-        { name: "JavaScript/TS", level: "Advanced" },
+        { name: "Java", level: "Advanced" },
         { name: "SQL", level: "Advanced" },
-        { name: "Java", level: "Intermediate" },
-        { name: "Yul", level: "Intermediate" },
+        { name: "Solidity", level: "Expert" },
+        { name: "JavaScript/TS", level: "Advanced" },
       ]
     },
     {
-      title: "Backend & Systems",
-      icon: Server,
+      title: "Frameworks & APIs",
+      icon: Zap,
       color: "text-accent",
       borderColor: "border-accent/30",
       skills: [
-        { name: "System Design", level: "Expert" },
-        { name: "Microservices", level: "Expert" },
         { name: "FastAPI", level: "Expert" },
-        { name: "Performance Tuning", level: "Advanced" },
-        { name: "Docker", level: "Advanced" },
-        { name: "Kubernetes", level: "Intermediate" },
-        { name: "ReactJS", level: "Advanced" },
         { name: "Flask", level: "Advanced" },
+        { name: "Spring", level: "Intermediate" },
+        { name: "REST APIs", level: "Expert" },
+        { name: "SOAP", level: "Intermediate" },
+        { name: "Pytest", level: "Advanced" },
+        { name: "Pandas/Numpy", level: "Advanced" },
+        { name: "ReactJS", level: "Advanced" },
       ]
     },
     {
-      title: "Databases & APIs",
+      title: "Databases & Cloud",
       icon: Database,
       color: "text-amber-accent",
       borderColor: "border-amber-accent/30",
       skills: [
         { name: "MongoDB", level: "Expert" },
         { name: "PostgreSQL", level: "Advanced" },
-        { name: "Redis", level: "Advanced" },
+        { name: "MySQL", level: "Advanced" },
+        { name: "NoSQL", level: "Advanced" },
+        { name: "Elasticsearch", level: "Intermediate" },
         { name: "Kafka", level: "Advanced" },
-        { name: "REST API Design", level: "Expert" },
-        { name: "GraphQL", level: "Intermediate" },
-        { name: "OracleDB", level: "Intermediate" },
-        { name: "Data Pipelines", level: "Advanced" },
+        { name: "GCP", level: "Advanced" },
+        { name: "Azure", level: "Intermediate" },
       ]
     },
     {
-      title: "Blockchain & Web3",
-      icon: Shield,
+      title: "DevOps & Architecture",
+      icon: GitMerge,
       color: "text-orange-400",
       borderColor: "border-orange-400/30",
       skills: [
-        { name: "Smart Contract Auditing", level: "Expert" },
-        { name: "Gas Optimization", level: "Advanced" },
-        { name: "DeFi Protocols", level: "Advanced" },
-        { name: "EIP/ERC Standards", level: "Expert" },
-        { name: "Anchor Framework", level: "Advanced" },
-        { name: "Chainlink", level: "Advanced" },
-        { name: "Ethers.js", level: "Advanced" },
-        { name: "Hyperledger Fabric", level: "Intermediate" },
+        { name: "Docker", level: "Advanced" },
+        { name: "Kubernetes", level: "Advanced" },
+        { name: "CI/CD", level: "Expert" },
+        { name: "Jenkins", level: "Intermediate" },
+        { name: "Containerization", level: "Advanced" },
+        { name: "MVC", level: "Advanced" },
+        { name: "Agile", level: "Advanced" },
+        { name: "Git", level: "Expert" },
       ]
     },
     {
-      title: "DevOps & Testing",
-      icon: GitMerge,
+      title: "Core Competencies",
+      icon: Shield,
       color: "text-red-400",
       borderColor: "border-red-400/30",
       skills: [
-        { name: "CI/CD Pipelines", level: "Advanced" },
-        { name: "GitHub Actions", level: "Advanced" },
-        { name: "Foundry", level: "Expert" },
-        { name: "Hardhat", level: "Advanced" },
-        { name: "Slither", level: "Expert" },
-        { name: "Pytest", level: "Advanced" },
-        { name: "Locust (Load Testing)", level: "Intermediate" },
-        { name: "Fuzz Testing", level: "Advanced" },
-      ]
-    },
-    {
-      title: "Platforms & Tools",
-      icon: Zap,
-      color: "text-purple-400",
-      borderColor: "border-purple-400/30",
-      skills: [
-        { name: "Code4rena", level: "Expert" },
-        { name: "Sherlock", level: "Advanced" },
-        { name: "GCP", level: "Advanced" },
-        { name: "Git & GitHub", level: "Expert" },
-        { name: "Postman", level: "Advanced" },
-        { name: "Remix", level: "Advanced" },
-        { name: "Metamask", level: "Expert" },
-        { name: "Tableau", level: "Intermediate" },
+        { name: "System Design", level: "Expert" },
+        { name: "Performance Tuning", level: "Expert" },
+        { name: "Distributed Systems", level: "Advanced" },
+        { name: "Code Auditing", level: "Advanced" },
       ]
     }
   ];
@@ -134,11 +113,11 @@ export function Skills() {
             </span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              A comprehensive skillset covering smart contract security, backend development, and blockchain protocols.
+              A comprehensive overview of my technical skills in backend development, cloud technologies, and system architecture.
             </p>
           </div>
 
-          {/* Skills Grid - Updated to 3 columns on large screens */}
+          {/* Skills Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {skillCategories.map((category, categoryIndex) => {
               const Icon = category.icon;

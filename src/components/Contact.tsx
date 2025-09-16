@@ -8,7 +8,6 @@ export function Contact() {
     {
       icon: Mail,
       title: "Email",
-      description: "Direct communication for audit inquiries",
       value: "anjanayraina@gmail.com",
       action: "Send Email",
       color: "text-primary",
@@ -17,8 +16,7 @@ export function Contact() {
     {
       icon: MessageCircle,
       title: "Telegram",
-      description: "Quick discussions and community engagement",
-      value: "@anjanay_raina",
+      value: "@stryder1496",
       action: "Message on Discord",
       color: "text-accent",
       bgColor: "bg-accent/10"
@@ -26,7 +24,7 @@ export function Contact() {
     {
       icon: Calendar,
       title: "Schedule Call",
-      description: "Book a consultation for complex projects",
+      description: "Book a consultation",
       value: "30-60 min sessions available",
       action: "Book Meeting",
       color: "text-amber-accent",
@@ -57,7 +55,7 @@ export function Contact() {
             </span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8">
-            Ready to build scalable backend systems or secure your DeFi protocol? Let's discuss how I can help optimize your infrastructure and protect your users.
+            Ready to build scalable backend systems or secure your protocol? Let's discuss how I can help optimize your infrastructure and protect your project.
           </p>
           
           {/* Quick Stats */}
@@ -70,10 +68,7 @@ export function Contact() {
               <div className="w-2 h-2 bg-primary rounded-full"></div>
               <span>Typical response: 24 hours</span>
             </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-amber-accent rounded-full"></div>
-              <span>Emergency audits available</span>
-            </div>
+
           </div>
         </div>
 

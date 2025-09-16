@@ -34,7 +34,7 @@ export function AuditsRankings() {
     {
       icon: Shield,
       title: "Security Research",
-      subtitle: "Blockchain & Backend",
+      subtitle: "Blockchain & Research",
       value: "Top 300",
       description: "Code4rena ranking + published IEEE research",
       color: "text-orange-400",

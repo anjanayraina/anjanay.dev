@@ -17,10 +17,10 @@ export function Hero() {
         </div>
 
         <div className="container mx-auto px-6 z-10 text-center max-w-5xl">
-          {/* Status Badge */}
+          {/* Status Badge - Updated Text */}
           <Badge variant="outline" className="mb-8 border-primary text-primary font-mono cyber-glow">
             <div className="w-2 h-2 bg-accent rounded-full mr-2 animate-pulse"></div>
-            Status: Available for Audits & Projects
+            Available for Hire, Projects and Security Reviews
           </Badge>
 
           {/* Main Heading */}
@@ -30,7 +30,7 @@ export function Hero() {
             </span>
           </h1>
 
-          {/* Sub-headline - Updated from Resumes */}
+          {/* Sub-headline */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
             Lead Smart-Contract Auditor and Backend Developer specializing in high-value DeFi protocols and performant, fault-tolerant systems.
           </p>
@@ -60,23 +60,22 @@ export function Hero() {
             </Button>
           </div>
 
-          {/* Quick Stats - Updated from Resumes */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-mono text-primary mb-2">3+</div>
+              <div className="text-3xl font-mono text-primary mb-2">2+</div>
               <div className="text-muted-foreground">Years Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-mono text-accent mb-2">15+</div>
+              <div className="text-3xl font-mono text-accent mb-2">20+</div>
               <div className="text-muted-foreground">Critical Vulnerabilities Found</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-mono text-amber-accent mb-2">60%</div>
-              <div className="text-muted-foreground">Max Gas Optimization</div>
+              <div className="text-3xl font-mono text-amber-accent mb-2">3x</div>
+              <div className="text-muted-foreground">Faster API Response</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-mono text-orange-400 mb-2">Top 300</div>
-              <div className="text-muted-foreground">Code4rena Auditor Ranking</div>
+              <div className="text-3xl font-mono text-orange-400 mb-2">90%</div>
+              <div className="text-muted-foreground">Data Collection Efficiency</div>
             </div>
           </div>
         </div>
