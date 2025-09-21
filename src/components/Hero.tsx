@@ -51,7 +51,7 @@ export function Hero() {
                 <ExternalLink className="w-3 h-3 ml-2" />
               </a>
             </Button>
-            <Button asChild variant="outline" className="border-amber-accent text-amber-accent hover:bg-amber-accent hover:text-background transition-all duration-300">
+            <Button asChild variant="outline" className="border-amber-accent text-amber-accent hover:bg-amber-accent hover:text-background transition-all duration-300 ">
               <a href="https://leetcode.com/u/anjanayraina/" target="_blank" rel="noopener noreferrer">
                 <Keyboard className="w-4 h-4 mr-2" />
                 LeetCode
