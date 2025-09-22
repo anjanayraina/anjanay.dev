@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "./ui/button";
-import { Home, Code, FileText, Shield } from "lucide-react"; // Added Shield
+import { Home, Code, FileText, Shield } from "lucide-react";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -8,11 +8,11 @@ export function Navigation() {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Updated navItems to include Audits
+  // Updated navItems to include "Security Reviews"
   const navItems = [
     { href: '/', label: 'Home', icon: Home },
     { href: '/projects', label: 'Projects', icon: Code },
-    { href: '/audits', label: 'Audits', icon: Shield }, // New Item
+    { href: '/security-reviews', label: 'Security Reviews', icon: Shield }, // Updated
     { href: '/resume', label: 'Resume', icon: FileText },
   ];
 
