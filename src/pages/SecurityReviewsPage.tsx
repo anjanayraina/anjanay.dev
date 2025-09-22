@@ -25,13 +25,19 @@ const securityReviews = [
     {
         title: "WyvernX Security Review",
         protocol: "NFT Marketplace",
-        href: "https://drive.google.com/drive/folders/1I0oOs3FtQsE9uFd8lgJPf8GmguySxeNt", // <-- PASTE WYVERNX LINK HERE
+        href: "https://drive.google.com/drive/folders/1I0oOs3FtQsE9uFd8lgJPf8GmguySxeNt",
         tags: ["Solidity", "ERC721", "Access Control"],
     },
     {
         title: "Kendu NFT Marketplace Review",
         protocol: "NFT Marketplace",
-        href: "https://drive.google.com/drive/folders/1MKm8YU31gpaNCIJmQgSCboIa5AEp_OI5", // <-- PASTE KENDU LINK HERE
+        href: "https://drive.google.com/drive/folders/1MKm8YU31gpaNCIJmQgSCboIa5AEp_OI5",
+        tags: ["Solidity", "Marketplace", "ERC1155"],
+    },
+    {
+        title: "QIE Domains Security Review",
+        protocol: "Web3 Platform",
+        href: "https://drive.google.com/drive/folders/11mG8RuZcM0H_y6CPSglCSdtl9FYdhecE",
         tags: ["Solidity", "Marketplace", "ERC1155"],
     },
 ];

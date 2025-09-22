@@ -119,23 +119,23 @@ export function Contact() {
                 <h4 className="mb-4">Professional Profiles</h4>
                 <div className="flex flex-wrap gap-3">
                   <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/anjanayraina" target="_blank" rel="noopener noreferrer">
                       <Github className="w-4 h-4 mr-2" />
                       GitHub
                       <ExternalLink className="w-3 h-3 ml-2" />
                     </a>
                   </Button>
                   <Button asChild variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/anjanayraina/" target="_blank" rel="noopener noreferrer">
                       <Shield className="w-4 h-4 mr-2" />
-                      Code4rena
+                      Linkedin
                       <ExternalLink className="w-3 h-3 ml-2" />
                     </a>
                   </Button>
                   <Button asChild variant="outline" className="border-amber-accent text-amber-accent hover:bg-amber-accent hover:text-background">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
+                    <a href="https://leetcode.com/u/anjanayraina/" target="_blank" rel="noopener noreferrer">
                       <Shield className="w-4 h-4 mr-2" />
-                      Sherlock
+                      Leetcode
                       <ExternalLink className="w-3 h-3 ml-2" />
                     </a>
                   </Button>
