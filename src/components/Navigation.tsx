@@ -1,7 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "./ui/button";
-import { Badge } from "./ui/badge";
-import { Home, Code, FileText, Mail } from "lucide-react";
+import { Home, Code, FileText, Shield } from "lucide-react"; // Added Shield
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -9,9 +8,11 @@ export function Navigation() {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  // Updated navItems to include Audits
   const navItems = [
     { href: '/', label: 'Home', icon: Home },
     { href: '/projects', label: 'Projects', icon: Code },
+    { href: '/audits', label: 'Audits', icon: Shield }, // New Item
     { href: '/resume', label: 'Resume', icon: FileText },
   ];
 

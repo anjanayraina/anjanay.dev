@@ -3,34 +3,27 @@ import { Button } from "../components/ui/button";
 import { Badge } from "../components/ui/badge";
 import { Shield, FileText } from "lucide-react";
 
-// Add your audit report details here
-// The 'file' should be the exact name of the PDF in your /public/audits/ folder
+// Add your audit report details here.
+// The 'file' should be the exact name of the PDF in your /public/audits/ folder.
 const auditReports = [
     {
-        title: "WyvernX Security Review",
-        protocol: "NFT Marketplace",
-        file: "AWyvernX_Security_Review.pdf",
-        tags: ["Solidity", "ERC721", "Access Control"],
-    },
-    {
-        title: "Zus Contracts Audit",
+        title: "Zus Network Audit",
         protocol: "Decentralized Storage",
-        file: "BZus Contracts Audit .pdf",
-        tags: ["Go", "Storage Network", "Cryptography"],
+        file: "Zus_Contracts_Audit.pdf", // Replace with your actual PDF filename
+        tags: ["Go", "Storage Network", "Cryptography", "CI/CD"],
     },
     {
-        title: "Moonvera CSolution Audit",
+        title: "Empower Coin Audit",
         protocol: "DeFi Protocol",
-        file: "CMoonvera CSolution Audit.pdf",
-        tags: ["Solidity", "DeFi", "Tokenomics"],
+        file: "Empower_Coin_Audit.pdf", // Replace with your actual PDF filename
+        tags: ["Solidity", "DeFi", "Tokenomics", "Reentrancy"],
     },
     {
-        title: "Kendu NFT Marketplace Audit",
-        protocol: "NFT Marketplace",
-        file: "Kendu Audit.pdf",
-        tags: ["Solidity", "Marketplace", "ERC1155"],
+        title: "Moonvera Solutions Audit",
+        protocol: "Web3 Platform",
+        file: "Moonvera_CSolution_Audit.pdf", // Replace with your actual PDF filename
+        tags: ["Solidity", "Slither", "Foundry", "Gas Optimization"],
     },
-    // Add more audit reports here...
 ];
 
 export function AuditsPage() {
@@ -39,7 +32,7 @@ export function AuditsPage() {
             <div className="container mx-auto max-w-6xl">
                 {/* Section Header */}
                 <div className="text-center mb-16">
-                    <Badge variant="outline" className="border-accent text-accent mb-6 font-mono">
+                    <Badge variant="outline" className="border-accent text-accent mb-6 font-mono secure-glow">
                         Security & Diligence
                     </Badge>
                     <h1 className="font-mono text-4xl md:text-6xl mb-6 bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent">

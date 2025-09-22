@@ -3,6 +3,7 @@ import { Navigation } from "./components/Navigation";
 import { HomePage } from "./pages/Home";
 import { ProjectsPage } from "./pages/ProjectsPage";
 import { ResumePage } from "./pages/ResumePage";
+import { AuditsPage } from "./pages/AuditsPage"; // Import the new page
 import { Contact } from "./components/Contact";
 
 export default function App() {
@@ -14,9 +15,10 @@ export default function App() {
                     <Routes>
                         <Route path="/" element={<HomePage />} />
                         <Route path="/projects" element={<ProjectsPage />} />
+                        <Route path="/audits" element={<AuditsPage />} />
                         <Route path="/resume" element={<ResumePage />} />
                     </Routes>
-                    <Contact /> {/* Keep Contact on every page for easy access */}
+                    <Contact />
                 </main>
             </div>
         </Router>
