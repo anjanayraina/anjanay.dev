@@ -8,11 +8,10 @@ export function Navigation() {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Updated navItems to include "Security Reviews"
   const navItems = [
     { href: '/', label: 'Home', icon: Home },
     { href: '/projects', label: 'Projects', icon: Code },
-    { href: '/security-reviews', label: 'Security Reviews', icon: Shield }, // Updated
+    { href: '/security-reviews', label: 'Security Reviews', icon: Shield },
     { href: '/resume', label: 'Resume', icon: FileText },
   ];
 
