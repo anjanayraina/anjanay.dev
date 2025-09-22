@@ -2773,6 +2773,19 @@
   }
 
   @media (hover: hover) {
+    .hover\:bg-amber-accent:hover {
+      background-color: var(--amber-accent);
+    }
+    .hover\:text-background:hover {
+      color: var(--background);
+    }
+    /* Add this for better contrast if needed */
+    .hover\:text-foreground:hover {
+      color: var(--foreground);
+    }
+  }
+
+  @media (hover: hover) {
     .group-hover\:scale-110:is(:where(.group):hover *) {
       --tw-scale-x: 110%;
       --tw-scale-y: 110%;

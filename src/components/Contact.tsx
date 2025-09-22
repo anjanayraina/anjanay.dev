@@ -21,7 +21,7 @@ export function Contact() {
       description: "Quick discussions and community engagement",
       value: "@stryder1496",
       action: "Message on Discord",
-      href: "https://discord.com/",
+      href: "https://discord.com/users/stryder1496", // Direct link to user profile
       style: "text-accent border-accent hover:bg-accent hover:text-accent-foreground",
       glow: "secure-glow"
     },
@@ -32,8 +32,8 @@ export function Contact() {
       value: "30-60 min sessions available",
       action: "Book Meeting",
       href: "https://calendly.com/anjanayraina326/30min",
-      style: "text-amber-accent border-amber-accent ",
-      glow: "orange-glow"
+      style: "text-amber-accent border-amber-accent hover:bg-amber-accent hover:text-background",
+      glow: "amber-glow"
     }
   ];
 
@@ -73,10 +73,6 @@ export function Contact() {
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
                 <span>Typical response: 24 hours</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-amber-accent rounded-full"></div>
-                <span>Emergency audits available</span>
-              </div>
             </div>
           </div>
 
@@ -92,7 +88,7 @@ export function Contact() {
                 {contactMethods.map((method, index) => {
                   const Icon = method.icon;
                   return (
-                      <Card key={index} className="p-6 bg-card border-border hover:border-primary/30 transition-all duration-300 group">
+                      <Card key={index} className={`p-6 bg-card border-border hover:border-primary/30 transition-all duration-300 group ${method.glow}`}>
                         <div className="flex items-start space-x-4">
                           <div className={`p-3 rounded-lg ${method.style.split(' ')[0].replace('text-', 'bg-')}/10 ${method.style.split(' ')[0]} group-hover:scale-110 transition-transform duration-300`}>
                             <Icon className="w-5 h-5" />
