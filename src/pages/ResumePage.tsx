@@ -4,7 +4,6 @@ import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 import { Button } from '../components/ui/button';
 import { Download } from 'lucide-react';
-
 // Required setup for react-pdf
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
@@ -20,10 +19,10 @@ export function ResumePage() {
     return (
         <div className="container mx-auto max-w-5xl py-28 px-6">
             <div className="flex justify-center mb-8">
-                <Button asChild>
-                    <a href={resumeUrl} download="AnjanayRaina_Resume.pdf">
+                <Button className="mt-4 sm:mt-0" asChild>
+                    <a href="../resources/Anjanay_Raina_Resume.pdf" download>
                         <Download className="w-4 h-4 mr-2" />
-                        Download Resume
+                        Download PDF
                     </a>
                 </Button>
             </div>
