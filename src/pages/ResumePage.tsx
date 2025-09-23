@@ -1,13 +1,25 @@
-import { useState } from 'react';
-import { Document, Page, pdfjs } from 'react-pdf';
-import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
-import 'react-pdf/dist/esm/Page/TextLayer.css';
-import { Button } from '../components/ui/button';
-import { Download } from 'lucide-react';
-// Required setup for react-pdf
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+import { useState } from "react";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Download, Mail, Linkedin, Github, MapPin } from "lucide-react";
+import { Document, Page, pdfjs } from "react-pdf";
+import pdf from "../public/Anjanay_Raina_Resume.pdf"
+// This line is important for Vite projects to load the PDF worker correctly.
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+    'pdfjs-dist/build/pdf.worker.min.mjs',
+    import.meta.url,
+).toString();
 
-const resumeUrl = "src/resources/Anjanay_Raina_Resume.pdf"; // Path to your resume in the public folder
+const resumeData = {
+    name: "Anjanay Raina",
+    title: "Backend & Smart Contract Engineer",
+    location: "New Delhi, India",
+    email: "mailto:anjanayraina@gmail.com",
+    social: {
+        linkedin: "https://linkedin.com/in/anjanay-raina",
+        github: "https://github.com/anjanayraina",
+    },
+};
 
 export function ResumePage() {
     const [numPages, setNumPages] = useState<number | null>(null);
@@ -16,30 +28,39 @@ export function ResumePage() {
         setNumPages(numPages);
     }
 
-    return (
-        <div className="container mx-auto max-w-5xl py-28 px-6">
-            <div className="flex justify-center mb-8">
-                <Button className="mt-4 sm:mt-0" asChild>
-                    <a href="../resources/Anjanay_Raina_Resume.pdf" download>
-                        <Download className="w-4 h-4 mr-2" />
-                        Download PDF
-                    </a>
-                </Button>
-            </div>
+    // CORRECTED PATH: Use an absolute path from the public folder root.
+    const resumePath = "/Anjanay_Raina_Resume.pdf";
 
+    return (
+        <main className="container mx-auto max-w-4xl py-24 px-6">
+
+
+
+
+            {/* Embedded PDF Viewer */}
             <div className="flex justify-center border border-border rounded-lg overflow-hidden bg-secondary/20">
-                <Document file={resumeUrl} onLoadSuccess={onDocumentLoadSuccess}>
+                <Document file={pdf} onLoadSuccess={onDocumentLoadSuccess}>
                     {Array.from(new Array(numPages || 0), (el, index) => (
                         <Page
                             key={`page_${index + 1}`}
                             pageNumber={index + 1}
                             renderTextLayer={false}
                             renderAnnotationLayer={false}
-                            width={Math.min(window.innerWidth * 0.9, 1000)}
+                            // Using Tailwind classes for responsive width is cleaner
+                            className="w-full"
                         />
                     ))}
                 </Document>
             </div>
-        </div>
+
+            <div className="flex justify-center items-center mb-12">
+                <Button className="mt-4 sm:mt-0" asChild>
+                    <a href={resumePath} download="Anjanay_Raina_Resume.pdf">
+                        <Download className="w-4 h-4 mr-2" />
+                        Download PDF
+                    </a>
+                </Button>
+            </div>
+        </main>
     );
 }
