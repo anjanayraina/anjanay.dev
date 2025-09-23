@@ -8,7 +8,7 @@ import { Download } from 'lucide-react';
 // Required setup for react-pdf
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
-const resumeUrl = "src/public/Anjanay_Raina_Resume.pdf"; // Path to your resume in the public folder
+const resumeUrl = "src/resources/Anjanay_Raina_Resume.pdf"; // Path to your resume in the public folder
 
 export function ResumePage() {
     const [numPages, setNumPages] = useState<number | null>(null);
