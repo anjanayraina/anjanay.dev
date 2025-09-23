@@ -1,25 +1,15 @@
-import { useState } from "react";
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Download, Mail, Linkedin, Github, MapPin } from "lucide-react";
-import { Document, Page, pdfjs } from "react-pdf";
+import { useState } from 'react';
+import { Document, Page, pdfjs } from 'react-pdf';
+import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
+import 'react-pdf/dist/esm/Page/TextLayer.css';
+import { Button } from '../components/ui/button';
+import { Download } from 'lucide-react';
 import pdf from "../public/Anjanay_Raina_Resume.pdf"
-// This line is important for Vite projects to load the PDF worker correctly.
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-    'pdfjs-dist/build/pdf.worker.min.mjs',
-    import.meta.url,
-).toString();
 
-const resumeData = {
-    name: "Anjanay Raina",
-    title: "Backend & Smart Contract Engineer",
-    location: "New Delhi, India",
-    email: "mailto:anjanayraina@gmail.com",
-    social: {
-        linkedin: "https://linkedin.com/in/anjanay-raina",
-        github: "https://github.com/anjanayraina",
-    },
-};
+// Required setup for react-pdf
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+
+const resumePath = "/Anjanay_Raina_Resume.pdf";
 
 export function ResumePage() {
     const [numPages, setNumPages] = useState<number | null>(null);
@@ -27,9 +17,6 @@ export function ResumePage() {
     function onDocumentLoadSuccess({ numPages }: { numPages: number }) {
         setNumPages(numPages);
     }
-
-    // CORRECTED PATH: Use an absolute path from the public folder root.
-    const resumePath = "/Anjanay_Raina_Resume.pdf";
 
     return (
         <main className="container mx-auto max-w-4xl py-24 px-6">
